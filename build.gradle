@@ -1,0 +1,28 @@
+plugins {
+    id 'org.jetbrains.intellij' version '0.3.6'
+}
+
+apply plugin: 'java'
+apply plugin: 'org.jetbrains.intellij'
+
+group 'org.jetbrains'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+intellij {
+    version '2018.1.5'
+}
+patchPluginXml {
+    changeNotes """
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>"""
+}
